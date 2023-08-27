@@ -9,7 +9,7 @@ def notas(* núm):
   c = 0
   resp = ''
   while resp in 'Ss':
-    relação_notas[c] = float(input(f'Digitea nota na posição {c}: '))
+    relação_notas[c] = float(input(f'Digite a nota na posição {c}: '))
     resp = str(input('Deseja lançar mais alguma nota? '))
     lista = relação_notas.copy()
     soma += relação_notas[c]
@@ -17,9 +17,9 @@ def notas(* núm):
     if resp in 'Nn':
       break
   print(f'As notas digitadas foram : {lista}')
-  print(max(lista))
-  print(min(lista))
+  print(f'A maior nota foi: {max(lista)}')
+  print(f'A menor nota foi: {min(lista)}')
   print(f'A quantidade de notas lancadas foi: {len(lista)}')
-  print(soma/len(lista))
+  print(f' A média é: {soma/len(lista)}')
 
 notas()
